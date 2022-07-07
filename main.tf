@@ -14,6 +14,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "terraformAWS" {
+  count                  = 2
   ami                    = var.ami_aws
   instance_type          = var.instanceType_aws
   vpc_security_group_ids = var.sgID_aws
